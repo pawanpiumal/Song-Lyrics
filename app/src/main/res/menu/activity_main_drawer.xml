@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_hindi"
+            android:title="Hindi" />
+        <item
+            android:id="@+id/nav_English"
+            android:title="English" />
+        <item
+            android:id="@+id/nav_sinhala"
+            android:title="Sinhala" />
+        <item
+            android:id="@+id/nav_tamil"
+            android:title="Tamil" />
+        <item
+            android:id="@+id/nav_searchByArtist"
+            android:title="Search By Artist" />
+    </group>
+
+</menu>
