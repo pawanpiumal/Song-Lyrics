@@ -29,14 +29,15 @@ public class DBHandler extends SQLiteAssetHelper {
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = db.query(Song.SongDetails.TABLE_NAME,
-                new String[]{Song.SongDetails.COLUMN_NAME_SONG_NAME},
+                new String[]{Song.SongDetails.COLUMN_NAME_SONG_NAME, Song.SongDetails.COLUMN_NAME_ARTIST},
                 Song.SongDetails.COLUMN_NAME_SONG_CATEGORY + " = ? ",
                 new String[]{category},
                 null,
                 null,
                 null);
         while (cursor.moveToNext()){
-            songNames.add(cursor.getString(cursor.getColumnIndexOrThrow(Song.SongDetails.COLUMN_NAME_SONG_NAME)));
+
+            songNames.add(cursor.getString(cursor.getColumnIndexOrThrow(Song.SongDetails.COLUMN_NAME_SONG_NAME))+ " - "+ cursor.getString(cursor.getColumnIndexOrThrow(Song.SongDetails.COLUMN_NAME_ARTIST)));
         }
 
         db.close();
