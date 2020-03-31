@@ -18,10 +18,7 @@ public class DBHandler extends SQLiteAssetHelper {
         super(context, DATABASE_NAME, null, 1);
     }
 
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        super.onUpgrade(db, oldVersion, newVersion);
-    }
+
 
     public ArrayList<String> getSongNames(String category){
         ArrayList<String> songNames = new ArrayList<>();

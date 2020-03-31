@@ -25,11 +25,10 @@ public class SongActivity extends AppCompatActivity {
         txtViewSong = findViewById(R.id.textViewSong);
         Intent intent = getIntent();
         String songName = intent.getStringExtra(SongListActivity.SONG_NAME);
-        Log.v("Song",songName);
-        Log.v("Song","sadasdsa");
+        songName = songName.split(" - ")[0];
         DBHandler dbHandler = new DBHandler(getApplicationContext());
         String song  = dbHandler.getSong(songName);
-        Log.v("Song",dbHandler.getSong("Older"));
+        Log.v("Song",song);
         txtViewSong.setText(song);
 
 
